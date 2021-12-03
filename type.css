@@ -1,0 +1,131 @@
+body {
+    margin: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+}
+
+.navbar {
+    float: left;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 25px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(88, 86, 86);
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.center {
+    margin-top: 1%;
+    display: inline-block;
+    font-size: x-large;
+    text-transform: uppercase;
+    margin-right: auto;
+    color: rgb(66, 65, 65);
+    cursor: pointer;
+}
+
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+    position: relative;
+    align-items: center;
+}
+
+.portfolio-img-background {
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+.logo-wrapper img {
+    width: 70%;
+    margin-bottom: 50px;
+    background-position: center;
+}
+
+.subtitle a {
+    text-decoration: none;
+    color: gray;
+    padding: 5px 20px;
+    font-size: x-large;
+    box-align: center;
+    text-align: center;
+    align-items: center;
+}
+
+.img-text-wrapper.subtitle {
+    transition: 1s;
+    font-weight: 600;
+    font-size: x-large;
+    color: transparent;
+    text-align: center;
+}
+
+.img-text-wrapper:hover .subtitle a {
+    font-weight: 600;
+    font-size: x-large;
+    color: lightgrey;
+    text-align: center;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 600px) {}

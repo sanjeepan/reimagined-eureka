@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> mesh </title>
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <div class="banner5">
+        <div class="navbar">
+
+            <ul>
+                <li><a href="../home.html"> Home </a></li>
+                <li><a href="../nav/type.html"> Content </a></li>
+                <li><a href="../nav/about.html"> About </a></li>
+                <li><a href="../nav/contact.html"> Contact </a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Mesh Topology</h1>
+            <p>
+                In this type of topology, a host is connected to one or multiple hosts.This topology has hosts in point-to-point connection with every other host or may also have hosts which are in point-to-point connection to few hosts only.
+            </p>
+
+            <img id="myImg" src="mesh.jpg" alt="Mesh Topology" style="width:100%;max-width:200px">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+
+            <p>
+                Hosts in Mesh topology also work as relay for other hosts which do not have direct point-to-point links. Mesh technology comes into two types:
+                <br> Full Mesh: All hosts have a point-to-point connection to every other host in the network. Thus for every new host n(n-1)/2 connections are required. It provides the most reliable network structure among all network topologies.
+                <br> Partially Mesh: Not all hosts have point-to-point connection to every other host. Hosts connect to each other in some arbitrarily fashion. This topology exists where we need to provide reliability to some hosts out of all.
+            </p>
+            <div>
+                <button type="button"><span></span><a href="ring.html">Previous</a></button>
+                <button type="button"><span></span><a href="tree.html">Next</a></button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script>
+    var modal = document.getElementById("myModal");
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+</script>
+
+</html>

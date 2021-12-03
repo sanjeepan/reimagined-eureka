@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> point to point </title>
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <div class="banner1">
+        <div class="navbar">
+
+            <ul>
+                <li><a href="../home.html"> Home </a></li>
+                <li><a href="../nav/type.html"> Content </a></li>
+                <li><a href="../nav/about.html"> About </a></li>
+                <li><a href="../nav/contact.html"> Contact </a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Point-to-Point</h1>
+            <br>
+            <p>
+                Point-to-point networks contains exactly two hosts such as computer, switches or routers, servers connected back to back using a single piece of cable. Often, the receiving end of one host is connected to sending end of the other and vice-versa.
+            </p>
+            <br>
+            <img id="myImg" src="point.jpg" alt="Point-to-Point" style="width:100%;max-width:300px">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+            <br>
+            <p>
+                If the hosts are connected point-to-point logically, then may have multiple intermediate devices. But the end hosts are unaware of underlying network and see each other as if they are connected directly.
+            </p>
+            <div>
+                <button type="button"><span></span><a href="../nav/introduction.html">Previous</a></button>
+                <button type="button"><span></span><a href="bus.html">Next</a></button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script>
+    var modal = document.getElementById("myModal");
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+</script>
+
+</html>

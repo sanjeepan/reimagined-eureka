@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> bus </title>
+    <link rel="stylesheet" href="introduction.css">
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+
+            <ul>
+                <li><a href="../home.html"> Home </a></li>
+                <li><a href="type.html"> Content </a></li>
+                <li><a href="about.html"> About </a></li>
+                <li><a href="contact.html"> Contact </a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Computer Network Topologies</h1>
+            <br>
+            <p>
+                Network topology refers to the manner in which the links and nodes of a network are arranged to relate to each other. Topologies are categorized as either physical network topology, which is the physical signal transmission medium, or logical network
+                topology, which refers to the manner in which data travels through the network between devices, independent of physical connection of the devices. Logical network topology examples include twisted pair Ethernet, which is categorized as
+                a logical bus topology, and token ring, which is categorized as a logical ring topology.
+                <br>
+                <br> Physical network topology examples include star, mesh, tree, ring, point-to-point, circular, hybrid, and bus topology networks, each consisting of different configurations of nodes and links. The ideal network topology depends on
+                each business’s size, scale, goals, and budget. A network topology diagram helps visualize the communicating devices, which are modeled as nodes, and the connections between the devices, which are modeled as links between the nodes.
+            </p>
+            <br> <img src="../images/topology.png" Class="logo">
+            <div>
+                <button type="button"><span></span><a href="../home.html">Previous</a></button>
+                <button type="button"><span></span><a href="../content/point.html">Next</a></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+
+</body>
+
+</html>

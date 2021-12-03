@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> bus </title>
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <div class="banner2">
+        <div class="navbar">
+
+            <ul>
+                <li><a href="../home.html"> Home </a></li>
+                <li><a href="../nav/type.html"> Content </a></li>
+                <li><a href="../nav/about.html"> About </a></li>
+                <li><a href="../nav/contact.html"> Contact </a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Bus Topology</h1>
+            <p>
+                In case of Bus topology, all devices share single communication line or cable. Bus topology may have problem while multiple hosts sending data at the same time. Therefore, Bus topology either uses CSMA/CD technology or recognizes one host as Bus Master
+                to solve the issue. It is one of the simple forms of networking where a failure of a device does not affect the other devices. But failure of the shared communication line can make all other devices stop functioning.</p>
+            <br>
+            <img id="myImg" src="bus.jpg" alt="Bus Topology" style="width:100%;max-width:300px">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+            <br>
+            <p> Both ends of the shared channel have line terminator. The data is sent in only one direction and as soon as it reaches the extreme end, the terminator removes the data from the line.</p>
+
+            <br>
+            <br>
+            <div>
+                <button type="button"><span></span><a href="point.html">Previous</a></button>
+                <button type="button"><span></span><a href="star.html">Next</a></button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var modal = document.getElementById("myModal");
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+</script>
+
+</html>

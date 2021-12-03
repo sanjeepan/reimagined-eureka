@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> tree </title>
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <div class="banner6">
+        <div class="navbar">
+
+            <ul>
+                <li><a href="../home.html"> Home </a></li>
+                <li><a href="../nav/type.html"> Content </a></li>
+                <li><a href="../nav/about.html"> About </a></li>
+                <li><a href="../nav/contact.html"> Contact </a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Tree Topology</h1>
+            <p>
+                Also known as Hierarchical Topology, this is the most common form of network topology in use presently.This topology imitates as extended Star topology and inherits properties of bus topology. This topology divides the network in to multiple levels/layers
+                of network. Mainly in LANs, a network is bifurcated into three types of network devices. The lowermost is access-layer where computers are attached. The middle layer is known as distribution layer, which works as mediator between upper
+                layer and lower layer. The highest layer is known as core layer, and is central point of the network, i.e. root of the tree from which all nodes fork.
+
+                <br> All neighboring hosts have point-to-point connection between them.Similar to the Bus topology, if the root goes down, then the entire network suffers even.though it is not the single point of failure. Every connection serves as point
+                of failure, failing of which divides the network into unreachable segment.
+            </p>
+            <img id="myImg" src="tree.jpg" alt="Tree Topology" style="width:100%;max-width:220px">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+            <div>
+                <button type="button"><span></span><a href="mesh.html">Previous</a></button>
+                <button type="button"><span></span><a href="hybrid.html">Next</a></button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var modal = document.getElementById("myModal");
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+</script>
+
+</html>

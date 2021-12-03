@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> hybrid </title>
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <div class="banner7">
+        <div class="navbar">
+
+            <ul>
+                <li><a href="../home.html"> Home </a></li>
+                <li><a href="../nav/type.html"> Content </a></li>
+                <li><a href="../nav/about.html"> About </a></li>
+                <li><a href="../nav/contact.html"> Contact </a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Hybrid Topology</h1>
+            <p>
+                A network structure whose design contains more than one topology is said to be hybrid topology. Hybrid topology inherits merits and demerits of all the incorporating topologies.</p>
+            <br>
+            <img id="myImg" src="hybrid.jpg" alt="Hybrid Topology" style="width:100%;max-width:300px">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+            <br>
+            <p> The above picture represents an arbitrarily hybrid topology. The combining topologies may contain attributes of Star, Ring, Bus, and Daisy-chain topologies. Most WANs are connected by means of Dual-Ring topology and networks connected to them
+                are mostly Star topology networks. Internet is the best example of largest Hybrid topology</p>
+
+            <br>
+            <div>
+                <button type="button"><span></span><a href="tree.html">Previous</a></button>
+                <button type="button"><span></span><a href="../nav/summary.html">Next</a></button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script>
+    var modal = document.getElementById("myModal");
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+</script>
+
+</html>

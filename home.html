@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css" />
+    <title>Home</title>
+</head>
+
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">Home </h2>
+            <div class="toggle"></div>
+        </header>
+
+        <video src="vedio/explore.mp4" muted loop autoplay> </video>
+
+        <div class="oberlay"></div>
+
+        <div class="text">
+            <h2>ICT-256</h2>
+            <h3>Computer Network Topologies</h3>
+            <p>Network Topology is the schematic description of a network arrangement, connecting various nodes(sender and receiver) through lines of connection.</p>
+            <a href="nav/introduction.html">Learn</a>
+        </div>
+
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="nav/type.html">Content</a></li>
+            <li><a href="nav/about.html">About</a></li>
+            <li><a href="nav/contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        })
+    </script>
+
+</body>
+
+</html>
